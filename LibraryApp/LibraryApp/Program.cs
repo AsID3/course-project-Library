@@ -94,9 +94,9 @@ namespace LibraryApp
             Console.Write("Введите год издания: ");
             int year;
 
-            while (!int.TryParse(Console.ReadLine(), out year) || year <= 0)
+            while (!int.TryParse(Console.ReadLine(), out year) || year <= 0 || year > DateTime.Now.Year)
             {
-                Console.Write("Введите корректный год: ");
+                Console.Write("Введите корректный год издания: ");
             }
 
             Console.Write("Введите количество страниц: ");
